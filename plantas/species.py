@@ -10,3 +10,10 @@ class Plants:
         self.irrigation = irrigation
         self.season = season
         self.pui = pui or uuid.uuid4()
+
+    def to_dict(self):
+        return vars(self)
+
+    @staticmethod
+    def schema():
+        return ['quantity', 'name', 'scientific_name', 'type_of_plant', 'irrigation', 'season', 'pui']
