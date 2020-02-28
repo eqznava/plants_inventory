@@ -5,7 +5,7 @@ from plantas.species import Plants
 
 class PlantServices:
     def __init__(self, table_name):
-        self.table_name ) table_name
+        self.table_name = table_name
 
     def create_plant(self, plant):
         with open(self.table_name, mode='a') as f:
@@ -26,7 +26,7 @@ class PlantServices:
             if plant['pui'] == updated_plant.pui:
                 updated_plants.append(updated_plant.to_dict())
             else:
-                updated_clients.append(plants)
+                updated_plants.append(plant)
 
         self._save_to_disk(updated_plants)
 
